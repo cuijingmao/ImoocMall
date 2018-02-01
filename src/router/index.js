@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import GoodsList from './../views/GoodsList.vue'
 import Title from '@/views/Title'
 import Image from '@/views/Image'
+import Cart from '@/views/Cart'
 Vue.use(Router)
 
 export default new Router({
@@ -26,6 +27,11 @@ export default new Router({
       ]
 
 
+    },
+    {
+      path:'/cart',
+      name:'Cart',
+      component:Cart
     }
   ]
 })
