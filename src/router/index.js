@@ -10,27 +10,18 @@ export default new Router({
   mode:'hash',
   routes: [
     {
-      path: '/goods',
+      path: '/',
       name: 'GoodsList',
-      component: GoodsList,
-      children:[
-        {
-          path:'title',
-          name:'title',
-          component:Title
-        },
-        {
-          path:'img',
-          name:'img',
-          component:Image
-        }
-      ]
+      components:{
+        default:GoodsList,
+        title:Title,
+        img:Image
 
-
+      }
     },
     {
-      path:'/cart',
-      name:'Cart',
+      path:'/cart/:cartId',
+      name:'cart',
       component:Cart
     }
   ]
