@@ -15,27 +15,22 @@ export default new Router({
   routes: [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       path: '/goods',
+=======
+      path: '/',
+>>>>>>> 7b5a72fd11c942b91b08851ea27904da77e3796d
       name: 'GoodsList',
-      component: GoodsList,
-      children:[
-        {
-          path:'title',
-          name:'title',
-          component:Title
-        },
-        {
-          path:'img',
-          name:'img',
-          component:Image
-        }
-      ]
+      components:{
+        default:GoodsList,
+        title:Title,
+        img:Image
 
-
+      }
     },
     {
-      path:'/cart',
-      name:'Cart',
+      path:'/cart/:cartId',
+      name:'cart',
       component:Cart
 =======
       path: '/',
